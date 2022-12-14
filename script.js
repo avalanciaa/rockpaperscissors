@@ -33,45 +33,45 @@ function game(id) {
   console.log(playRound(playerSelection, computerSelection));
 
   console.log("Player Win Totals " + playerScore);
-  playerscore.textContent = `Player Score: ${playerScore}`
+  playerscore.textContent = `You: ${playerScore}`
   console.log("Computer Win Totals " + computerScore);
-  computerscore.textContent = `Computer Score: ${computerScore}`
-  update.textContent = `Player Chose: ${playerSelection}  | Computer Chose: ${computerSelection}`
+  computerscore.textContent = `Computer: ${computerScore}`
   rounds.textContent = `Round: ${roundsPlayed}`
   
 
   function playRound(playerSelection, computerSelection) {
-    if (roundsPlayed == 5) {
-      if (playerScore > computerScore) {
-        update.textContent = "Winner! You beat the Computer!";
-      } else if (playerScore === computerScore) {
-        update.textContent = "You tied with the Computer. Try Again!"
-      } else {
+
+    if (playerScore == 5 || computerScore == 5 ) {
+      if (playerScore == 5 && playerScore > computerScore) {
+        update.textContent = "Winner! You beat the Computer!"
+      } else if (computerScore == 5 && computerScore > playerScore) {
         update.textContent = "Loser! You lost to the Computer"
+      } else if (computerScore == 5 && playerScore == 5) {
+        update.textContent = "You tied with the Computer. Try Again!"
       }
-  
+
       alert(`In the Last Round, you selected ${playerSelection} and the computer chose ${computerSelection} To Play Again click ok`) ? "" : location.reload();
-  
+    
     } else if (playerSelection === computerSelection) {
-        return `It's a Tie, You both picked ${playerSelection}`;
+        update.textContent = `It's a Tie, You both picked ${playerSelection}`;
       } else if (playerSelection === "rock" && computerSelection === "paper") {
         computerScore++
-        return "The Computer Wins! Paper beats Rock";
+        update.textContent = `The Computer Wins! Paper beats Rock`;
       } else if (playerSelection === "paper" && computerSelection === "scissors") {
         computerScore++
-        return "The Computer Wins! Scissors beats Paper";
+        update.textContent = `The Computer Wins! Scissors beats Paper`;
       } else if (playerSelection === "scissors" && computerSelection === "rock") {
         computerScore++
-        return "The Computer Wins! Rock beats Scissors";
+        update.textContent = `The Computer Wins! Rock beats Scissors`;
       } else if (playerSelection === "rock" && computerSelection === "scissors") {
         playerScore++
-        return "Nice! You Win! Rock beats Scissors";
+        update.textContent = `Nice! You Win! Rock beats Scissors`;
       } else if (playerSelection === "paper" && computerSelection === "rock") {
         playerScore++
-        return "Nice! You Win! Paper beats Rock";
+        update.textContent = `Nice! You Win! Paper beats Rock`;
       } else if (playerSelection === "scissors" && computerSelection === "paper") {
         playerScore++
-        return "Nice! You Win! Scissors beats Paper";
+        update.textContent = `Nice! You Win! Scissors beats Paper`;
       }
   }
 
