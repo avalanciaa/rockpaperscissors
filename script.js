@@ -50,43 +50,32 @@ function game(id) {
         update.textContent = "You tied with the Computer. Try Again!"
       }
 
-      alert(`In the Last Round, you selected ${playerSelection} and the computer chose ${computerSelection} To Play Again click ok`) ? "" : location.reload();
+      alert(`Restart the Game!`) ? "" : location.reload();
     
     } else if (playerSelection === computerSelection) {
-        update.textContent = `It's a Tie, You both picked ${playerSelection}`;
+        update.textContent = `It's a Tie`;
       } else if (playerSelection === "rock" && computerSelection === "paper") {
         computerScore++
-        update.textContent = `The Computer Wins! Paper beats Rock`;
+        update.textContent = `The Computer Wins! Vim beats VSCode`;
       } else if (playerSelection === "paper" && computerSelection === "scissors") {
         computerScore++
-        update.textContent = `The Computer Wins! Scissors beats Paper`;
+        update.textContent = `The Computer Wins! Emacs beats Vim`;
       } else if (playerSelection === "scissors" && computerSelection === "rock") {
         computerScore++
-        update.textContent = `The Computer Wins! Rock beats Scissors`;
+        update.textContent = `The Computer Wins! VSCode beats Emacs`;
       } else if (playerSelection === "rock" && computerSelection === "scissors") {
         playerScore++
-        update.textContent = `Nice! You Win! Rock beats Scissors`;
+        update.textContent = `Nice! You Win! VSCode beats Emacs`;
       } else if (playerSelection === "paper" && computerSelection === "rock") {
         playerScore++
-        update.textContent = `Nice! You Win! Paper beats Rock`;
+        update.textContent = `Nice! You Win! Vim beats VSCode`;
       } else if (playerSelection === "scissors" && computerSelection === "paper") {
         playerScore++
-        update.textContent = `Nice! You Win! Scissors beats Paper`;
+        update.textContent = `Nice! You Win! Emacs beats Vim`;
       }
   }
 
   
-
-  // }
-
-  // if (playerScore > computerScore) {
-  //   winner = "Winner! You beat the Computer!";
-  // } else if (playerScore === computerScore) {
-  //   winner = "You tied with the Computer. Try Again!"
-  // } else {
-  //   winner = "Loser! You lost to the Computer"
-  // }
-
 
   console.log("The result is:" + winner);
   console.log(roundsPlayed)

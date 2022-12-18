@@ -3,15 +3,6 @@
 }
 
 
-/* .header {
-    display: flex;
-    font-size: 28px;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    background-color: black;
-    margin: -10px;
-} */
-
 .vim, .emacs, .vscode {
     display: flex;
     background-color: red;
@@ -21,23 +12,9 @@
     align-self: center;
 }
 
-/* .footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 15px;
-    background-color: black;
-    color: white;
-    font-size: 18px;
-    margin: -10px;
-    font-weight: bold;
-    display: block;
-
-} */
-
 .gameplay-cont {
     display: flex;
-    background-color: antiquewhite;
+    background-color: black;
     margin: 50px;
     padding: 30px;
     flex-grow: 1;
@@ -50,30 +27,43 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    color: white;
+    margin: 80px;
 }
 
 .gameplay-buttons {
     display: flex;
-    background-color: #1F2937;
     padding: 5px;
+    gap: 3rem;
     flex-grow: 1;
+    flex-wrap: wrap;
     justify-content: space-evenly;
 }
 
 .scoreboard {
     display: flex;
     flex-direction: column;
-    background-color: aliceblue;
+    background-color: black;
     padding: 30px;
     flex-grow: 1;
+    color: white;
+}
+
+#update {
+    display: flex;
+    padding: 40px;
+    align-self: center;
+    align-content: center;
 }
 
 
 .main-section {
     display: flex;
-    padding: 30px;
+    padding: 0px;
+    margin: -10px;
+    margin-bottom: 120px;
     justify-content: space-between;
-    background-color:#30302c;
+    background-color: black;
     flex-direction: column;
 }
 .items {
@@ -86,9 +76,10 @@
 
 .battle-cont {
     display: flex;
-    padding: 20px;
+    margin: -10px;
+    padding: 40px;
     justify-content: center;
-    background-color: blanchedalmond;
+    background-color: black;
 }
 
 .battle {
@@ -121,10 +112,35 @@
 .title {
     font-size: 35px;
     align-self: center;
+    animation: yo 3s ease-in-out infinite alternate;
+
 }
 
+.button {
+    border-radius: 10px;
+    transition: all 0.4s ease;
+
+}
+
+.button:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    box-shadow: 0 0 20px 1px;
+  }
+
+@keyframes yo {
+    from{
+      text-shadow: 0 0 3px rgb(68, 170, 21), 0 0 6px rgb(19, 240, 30), 0 0 9px rgb(54, 239, 25), 0 0 12px rgb(25, 217, 131),0 0 15px rgb(13, 195, 16);
+    }
+    to {
+      text-shadow: 0 0 5px rgb(25, 217, 204), 0 0 10px rgb(16, 114, 242);
+    }
+  
+  }
+
+
 body {
-    background-color: #1F2937;
+    background-color: black;
 }
 
 ul {

@@ -8,23 +8,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<!-- <body>
-    <div class="header">
-        <ul class="items">
-            <div class="vscode">
-                <img src="./assets/rock.png" width="30px">
-                <li class="title">VSCode</li>
-            </div>
-            <div class="vim">
-                <img src="./assets/paper.jpeg" width="30px">
-                <li class="title">Vim</li>
-            </div>
-            <div class="emacs">
-                <img src="./assets/scissors.png" width="30px">
-                <li class="title">Emacs</li>
-            </div>
-        </ul>
-    </div> -->
     <div class="battle-cont">
         <h1 class="battle">The Battle of the Text Editors.</h1>
     </div>
@@ -33,16 +16,13 @@
 
         <div class="gameplay-cont">
             <div class="rules">
-                <h1>Rules:</h1>
-                <h1>VSCode beat Emacs (rock beat scissors)</h1>
-                <h1>Vim beat VSCode (paper beat rock)</h1>
-                <h1>Emacs beat Vim (scissors beat paper)</h1>
+                <h1>VSCode beat Emacs | Vim beat VSCode | Emacs beat Vim</h1>
             </div>
             
             <div class="gameplay-buttons">
-                <button onclick="game(this.id)" id="rock"><img src="./assets/vscode.png" width="200px"></button>
-                <button onclick="game(this.id)" id="paper"><img src="./assets/vim.png" width="200px"></button>
-                <button onclick="game(this.id)" id="scissors"><img src="./assets/emacs.png" height="200px" width="200px"></button>
+                <button class="button" onclick="game(this.id)" id="rock"><img src="./assets/vscode.png" width="200px"></button>
+                <button class="button" onclick="game(this.id)" id="paper"><img src="./assets/vim.png" width="200px"></button>
+                <button class="button" onclick="game(this.id)" id="scissors"><img src="./assets/emacs.png" height="200px" width="200px"></button>
             </div>
         </div>
 
@@ -57,16 +37,8 @@
         </div>
 
     </div>
-   
 
 
-    
-<!-- 
-    <footer class="footer">
-        <div class="text-box">
-            Made by @ <a href="https://github.com/avalanciaa">Avalanciaa</a> || inspired by <a href="https://www.youtube.com/watch?v=4yxBVZXmpGs">why i code</a>
-        </div>
-    </footer> -->
 
 </body>
 </html>
